@@ -1,0 +1,59 @@
+{% extends 'shop/base.html' %}
+{% block title %}Tracker{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="col my-4">
+            <h2 class="text-center my-2">Provide Your Order Id and Email to track your order</h2>
+            <form action="#" method="post" id="trackerForm">{% csrf_token %}
+                <input type="hidden" id="itemJson" name="itemJson">
+                <div class="row my-2">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="order">Order Id</label>
+                            <input type="text" name="order" class="form-control" id="order" placeholder="Order Id">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary my-2">Track Order</button>
+            </form>
+        </div>
+        <div class="col">
+            <h2>Your Order Status :</h2>
+            <div class="my-4">
+                <ul class="list-group" id="items">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block js %}
+<script>
+    $('#trackerForm').submit(function(event){
+        $('#items').empty();
+        var formData = {
+            'orderId': $('input[name=order]').val(),
+            'email': $('input[name=email]').val(),
+            'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()
+        };
+        $.ajax({
+            type: 'POST',
+            url: '/shop/tracker',
+            data: formData,
+            encode: true
+        })
+        .done(function(data){
+            console.log(data);
+        })
+        event.preventDefault();
+        console.log(formData);
+    });
+    
+</script>
+{% endblock %}

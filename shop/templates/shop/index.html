@@ -1,0 +1,233 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Shop!{% endblock %}
+{% block css %}
+<style>
+  body{
+    background-color:#F9F3EE;
+  }
+</style>
+{% endblock %}
+{% block body %}
+<div class="container">
+  {% load static %}
+  <div id="carouselExampleCaptions" class="carousel slide my-2" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'shop/car1.jpg' %}" class="d-block w-100 " alt="..." width="100" height="400">
+        
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'shop/car2.jpg' %}" class="d-block w-100" alt="..." width="100" height="400">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'shop/car3.jpg' %}" class="d-block w-100" alt="..." width="100" height="400">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-light fw-bold">Hurry Up</h5>
+          <p class="text-light fw-bolder">This Festiv season shop with us and get exciting offers!!!</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </div>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card shadow p-3 mb-5 bg-body rounded" style="height: 400px">
+          <div class="card-body">
+            <h4 class="card-title ">Styles for Everyone</h4>
+            <div class="row">
+              <div class="col-6">
+                <figure class="figure">
+                  <img src="{% static 'shop/Tshirts.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption  fw-bold"><a href="" class="text-dark text-decoration-none">Clothing</a></figcaption>
+                </figure>
+              </div>
+              <div class="col-6">
+                <figure class="figure">
+                  <img src="{% static 'shop/footware.jpg'%}" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption fw-bold"><a href="" class="text-dark text-decoration-none">Footware</a></figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <figure class="figure">
+                  <img src="{% static 'shop/watch.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption  fw-bold"><a href="" class="text-dark text-decoration-none">Watches</a></figcaption>
+                </figure>
+              </div>
+              <div class="col">
+                <figure class="figure">
+                  <img src="{% static 'shop/bags.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption  fw-bold"><a href="" class="text-dark text-decoration-none">Bags and Lugguage</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow p-3 mb-5 bg-body rounded" style="height: 400px">
+          <div class="card-body">
+            <h4 class="card-title">Shop By Category</h4>
+            <div class="row">
+              <div class="col">
+                <figure class="figure">
+                  <img src="{% static 'shop/grocerry.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption  fw-bold"><a href="" class="text-dark text-decoration-none">Groccerry</a></figcaption>
+                </figure>
+              </div>
+              <div class="col">
+                <figure class="figure">
+                  <img src="{% static 'shop/mobile.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption  fw-bold"><a href="" class="text-dark text-decoration-none">Mobile Phones</a></figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <figure class="figure">
+                  <img src="{% static 'shop/fashion.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption  fw-bold"><a href="" class="text-dark text-decoration-none">Fashion</a></figcaption>
+                </figure>
+              </div>
+              <div class="col">
+                <figure class="figure">
+                  <img src="{% static 'shop/electronics.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption  fw-bold"><a href="" class="text-dark text-decoration-none">Electronics</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow p-3 mb-5 bg-body rounded" style="height: 400px">
+          <div class="card-body">
+            <h5 class="card-title">Todays Special Upto 60% off</h5>
+    
+            <div class="row">
+              <div class="col">
+                <figure class="figure">
+                  <img src="{% static 'shop/furniture.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption  fw-bold"><a href="" class="text-dark text-decoration-none">Furniture</a></figcaption>
+                </figure>
+              </div>
+              <div class="col">
+                <figure class="figure">
+                  <img src="{% static 'shop/laptop.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption  fw-bold"><a href="" class="text-dark text-decoration-none">Laptops</a></figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <figure class="figure">
+                  <img src="{% static 'shop/kitchen.jpg' %}" class="figure-img img-fluid rounded" alt="...">
+                  <figcaption class="figure-caption  fw-bold"><a href="" class="text-dark text-decoration-none">Kitchen</a></figcaption>
+                </figure>
+              </div>
+              <div class="col">
+                <figure class="figure">
+                  <img src="{% static 'shop/shop3.jpg' %}" class="figure-img img-fluid rounded" alt="..." height="100px">
+                  <figcaption class="figure-caption  fw-bold"><a href="" class="text-dark text-decoration-none">Beuty</a></figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  {% for products in allprod %}
+  <h5>Today's Special</h5>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for product in products%}
+    <div class="col-md-3">
+      <div class="card shadow p-3 mb-5 bg-body rounded" >
+        <img src='/media/{{product.image}}' class="card-img-top" alt="..." width="142px" height="240px">
+        <div class="card-body">
+          <h5 class="card-title" id="namepr{{product.id}}">{{product.product_name}}</h5>
+          <p class="card-text">{{product.desc|slice:"0:50"}}...</p>
+          <h5 class="fw-bold">Rs.{{product.price}} /-</h5>
+          <button id="pr{{product.id}}" class="btn btn-primary cart" type="button">ADD TO CART</button>
+          <a href="/shop/productview/{{product.id}}"><button id="qv{{product.id}}" class="btn btn-secondary cart" type="button">Quick View</button></a>
+        </div>
+        <div class="card-footer">
+          <h6 class="text-muted">Last updated on {{product.list_date}}</h6>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+{%endblock%}
+{% block js %}
+<script>
+ 
+  console.log("working");
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+  if(localStorage.getItem("cart") == null) {
+    var cart = {}
+  }
+  else{
+    cart = JSON.parse(localStorage.getItem("cart"))
+  }
+  var count = document.getElementById("count").value;
+  console.log(count);
+  if(count == undefined) {
+    document.getElementById("count").innerHTML = 0;
+  }
+  
+  $('.cart').click(function(){
+    var sum = 0;
+    console.log("clicked");
+    var idstr = this.id.toString();
+    console.log(idstr);
+    if(cart[idstr]!=undefined) {
+      qty = cart[idstr][0]+1;
+      //cart[idstr] = [qty,name];
+      cart[idstr][0]=qty;
+    }
+    else{
+      qty=1;
+      name = document.getElementById('name' + idstr).innerHTML;
+      cart[idstr]=[qty,name];
+    }
+    console.log(cart);
+    function updateCart(){
+      localStorage.setItem('cart',JSON.stringify(cart));
+    }
+    for(i in cart){
+      sum += cart[i][0];
+      updateCart();
+    }
+    console.log(sum);
+    localStorage.setItem('sum', sum);
+    //localStorage.setItem('cart', JSON.stringify(cart));
+    
+  });
+  
+</script>
+{% endblock %}

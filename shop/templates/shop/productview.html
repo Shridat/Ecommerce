@@ -1,0 +1,26 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}ProductView!!!{% endblock %}
+{% block body %}
+
+<div class="container my-3">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="/media/{{product.image}}" alt="" width="100%" height="385px">
+        </div>
+        <div class="col-md-8">
+            <h1 class="fw-bold">{{product.product_name}}</h1>
+            <h4>{{product.desc}}</h4>
+            
+            <h6>Category: {{product.category}}</h6>
+            <h6>Subcategory: {{product.subcategory}}</h6>
+            <h5>Product Price: Rs. {{product.price}} /-</h5>
+            <div class="d-grid gap-2 d-md-block my-3">
+                <button class="btn" type="button" style="background-color: #FFD93D">Add To Cart</button>
+                <button class="btn" type="button" style="background-color: #FFB72B">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
